@@ -1,0 +1,199 @@
+ /* Background with Gradient Colors */
+ body {
+    font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff9e0d, #ff6f00, #ffdd59);
+    background-size: cover;
+    background-position: center;
+    animation: backgroundChange 15s ease-in-out infinite;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Poster Design */
+.poster {
+    max-width: 900px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    color: #333;
+    border: 5px solid #ff6f00;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+/* Header Section with Gradient */
+.header {
+    background: linear-gradient(135deg, #ff6f00, #ffdd59);
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 5px solid #ff9e0d;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: bounceIn 1s ease-out;
+}
+
+/* Content Section with Gradient */
+.content {
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 248, 220, 0.9), rgba(255, 200, 120, 0.8));
+    border-radius: 15px;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.content h2 {
+    font-size: 3em;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #ff6f00;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+.content p {
+    font-size: 1.4em;
+    margin: 20px 0;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Date and Time Section with Gradient */
+.date-time {
+    margin: 20px 0;
+    background: linear-gradient(135deg, #34d399, #2dd4bf);
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.date-time span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Price with Gradient Border */
+.price {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #ff4500;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ff6f00;
+    animation: pulse 1.5s ease-in-out infinite, popUp 1.5s ease-in-out;
+}
+@keyframes popUp {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Register Button with Gradient Background */
+.register-button {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #d613b6, #d811be);
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-in-out;
+    position: relative;
+}
+
+.register-button:hover {
+    background: linear-gradient(135deg, #b81bb8, #c216ab);
+    transform: scale(1.1);
+}
+
+.register-button::before {
+    content: '➔';
+    font-size: 1.5em;
+    margin-right: 10px;
+    animation: arrowBounce 1s infinite;
+}
+
+/* Footer with Gradient */
+.footer {
+    background: linear-gradient(135deg, #ff8a00, #ffbc00);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1.2em;
+    color: white;
+    border-top: 5px solid #ff9e0d;
+}
+
+/* Confetti Animation */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6f00;
+    opacity: 0.7;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.5;
+    }
+}
+
+/* Blur Effect for Background */
+.iframe-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+/* Keyframe Animations */
+@keyframes backgroundChange {
+    0% {
+        background-color: linear-gradient(135deg, #ff9e0d, #ff6f00, #ffdd59);
+    }
+    50% {
+        background-color: linear-gradient(135deg, #ff6f00, #ff9e0d, #ffdd59);
+    }
+    100% {
+        background-color: linear-gradient(135deg, #ff9e0d, #ff6f00, #ffdd59);
+    }
+    
+}
+
